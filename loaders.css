@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: block flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body > * {
+    margin: 4em;
+}
+
+/* Loading Circle 1 */
+
+@keyframes loading-1 {
+    0%, 10% {
+        stroke-dashoffset: 1;
+    }
+
+    40%, 60% {
+        stroke-dashoffset: 0;
+    }
+
+    90%, 100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+circle {
+    animation-name: loading-1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,339 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: block flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body > * {
+    margin: 4em;
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Animated Outline Button 1 */
+
+.animated-outline-button-1 {
+    position: relative;
+    padding: 1em;
+    background-color: #F0F0F0;
+    border: none;
+}
+
+.animated-outline-button-1 .outline {
+    display: inline flow-root;
+    position: absolute;
+    background-color: #E00;
+    transition: transform 0.1s linear;
+}
+
+.animated-outline-button-1 .outline-top {
+    height: 2px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.animated-outline-button-1 .outline-top.full {
+    transform: scaleX(1);
+}
+
+.animated-outline-button-1 .outline-right {
+    height: 100%;
+    width: 2px;
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.animated-outline-button-1 .outline-right.full {
+    transform: scaleY(1);
+}
+
+.animated-outline-button-1 .outline-bottom {
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.animated-outline-button-1 .outline-bottom.full {
+    transform: scaleX(1);
+}
+
+.animated-outline-button-1 .outline-left {
+    height: 100%;
+    width: 2px;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.animated-outline-button-1 .outline-left.full {
+    transform: scaleY(1);
+}
+
+/* Animated Outline Button 2 */
+
+.animated-outline-button-2 {
+    position: relative;
+    padding: 1em;
+    background-color: #F0F0F0;
+    border: none;
+}
+
+.animated-outline-button-2 .outline {
+    display: inline flow-root;
+    position: absolute;
+    background-color: #E00;
+    transition: transform 0.4s linear;
+}
+
+.animated-outline-button-2 .outline-top {
+    height: 2px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center top;
+}
+
+.animated-outline-button-2:hover .outline-top {
+    transform: scaleX(1);
+}
+
+.animated-outline-button-2 .outline-right {
+    height: 100%;
+    width: 2px;
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+    transform-origin: right center;
+}
+
+.animated-outline-button-2:hover .outline-right {
+    transform: scaleY(1);
+}
+
+.animated-outline-button-2 .outline-bottom {
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: center bottom;
+}
+
+.animated-outline-button-2:hover .outline-bottom {
+    transform: scaleX(1);
+}
+
+.animated-outline-button-2 .outline-left {
+    height: 100%;
+    width: 2px;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: left center;
+}
+
+.animated-outline-button-2:hover .outline-left {
+    transform: scaleY(1);
+}
+
+/* Animated Outline Button 3 */
+
+.animated-outline-button-3 {
+    position: relative;
+    padding: 1em;
+    background-color: #F0F0F0;
+    border: 2px solid #E00;
+}
+
+.animated-outline-button-3 .outline {
+    display: inline flow-root;
+    position: absolute;
+    background-color: #F0F0F0;
+    transition: transform 0.4s linear;
+}
+
+.animated-outline-button-3 .outline-top {
+    height: 2px;
+    width: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    transform-origin: center top;
+}
+
+.animated-outline-button-3:hover .outline-top {
+    transform: scaleX(0);
+}
+
+.animated-outline-button-3 .outline-right {
+    height: calc(100% + 4px);
+    width: 2px;
+    top: -2px;
+    right: -2px;
+    transform-origin: right center;
+}
+
+.animated-outline-button-3:hover .outline-right {
+    transform: scaleY(0);
+}
+
+.animated-outline-button-3 .outline-bottom {
+    height: 2px;
+    width: calc(100% + 4px);
+    bottom: -2px;
+    right: -2px;
+    transform-origin: center bottom;
+}
+
+.animated-outline-button-3:hover .outline-bottom {
+    transform: scaleX(0);
+}
+
+.animated-outline-button-3 .outline-left {
+    height: calc(100% + 4px);
+    width: 2px;
+    bottom: -2px;
+    left: -2px;
+    transform-origin: left center;
+}
+
+.animated-outline-button-3:hover .outline-left {
+    transform: scaleY(0);
+}
+
+/* Animated Underline Button */
+
+.animated-underline-button {
+    padding: 1em;
+    background-color: #FFF;
+    border: none;
+}
+
+.animated-underline-button span {
+    position: relative;
+}
+
+.animated-underline-button span::after {
+    content: "";
+    display: inline flow-root;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #E00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+
+.animated-underline-button:hover span::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Background Zoom Button 1 */
+
+.background-zoom-button-1 {
+    position: relative;
+    padding: 1em;
+    background-color: #F0F0F0;
+    border: none;
+}
+
+.background-zoom-button-1 span {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    transition: color 0.4s linear;
+}
+
+.background-zoom-button-1::after {
+    content: "";
+    display: inline flow-root;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #E00;
+    transform: scale(0);
+    transition: transform 0.4s ease-out;
+}
+
+.background-zoom-button-1:hover span {
+    color: #FFF;
+}
+
+.background-zoom-button-1:hover::after {
+    transform: scale(1);
+}
+
+/* Background Zoom Button 2 */
+
+.background-zoom-button-2 {
+    position: relative;
+    padding: 1em;
+    background-color: #E00;
+    border: none;
+}
+
+.background-zoom-button-2 span {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    transition: color 0.4s linear;
+}
+
+.background-zoom-button-2::after {
+    content: "";
+    display: inline flow-root;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #F0F0F0;
+    transition: transform 0.4s ease-out;
+}
+
+.background-zoom-button-2:hover span {
+    color: #FFF;
+}
+
+.background-zoom-button-2:hover::after {
+    transform: scale(0);
+}
+
+/* Circle Outline Button */
+
+
