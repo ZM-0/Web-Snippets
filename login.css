@@ -1,3 +1,5 @@
+/* Global Styles */
+
 html {
     box-sizing: border-box;
 }
@@ -18,6 +20,8 @@ body {
     background: linear-gradient(#FFF, #BFD7EA);
 }
 
+/* Form */
+
 form {
     padding: 2em;
     border-radius: 1em;
@@ -37,6 +41,8 @@ h1 {
     margin: 0.5em 0;
 }
 
+/* Input Fields */
+
 input {
     padding: 0.2em;
     border-radius: 0.2em;
@@ -45,10 +51,42 @@ input {
     font-size: 100%;
 }
 
-input:focus {
+input:not([type="password"]):focus {
     border-color: #456990;
     outline: solid 1.5px #456990;
 }
+
+.password-wrapper {
+    display: block flex;
+    align-items: center;
+    border: solid 1.5px #456990;
+    border-radius: 0.2em;
+}
+
+.password-wrapper input {
+    border: none;
+}
+
+.password-wrapper input:focus {
+    outline: none;
+}
+
+.password-wrapper:has(input:focus) {
+    border-color: #456990;
+    outline: solid 1.5px #456990;
+}
+
+.visibility-button {
+    display: block flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+.password-wrapper .visibility-button:hover {
+    cursor: pointer;
+}
+
+/* Labels */
 
 label {
     display: inline flex;
@@ -58,7 +96,6 @@ label {
     transform-origin: left top;
     transform: translate(0.13em, 1.85em) scale(1.43);
     transition: transform 0.3s;
-    /* vertical-align: top; */
 }
 
 span {
@@ -74,9 +111,14 @@ label:hover {
     cursor: text;
 }
 
-input:focus + .label-holder label, input:not(:placeholder-shown) + .label-holder label {
+input:focus + .label-holder label,
+input:not(:placeholder-shown) + .label-holder label,
+.password-wrapper:has(input:focus) + .label-holder label,
+.password-wrapper:has(input:not(:placeholder-shown)) + .label-holder label {
     transform: translate(0, 0) scale(1);
 }
+
+/* Control Buttons */
 
 .controls {
     display: block flex;
