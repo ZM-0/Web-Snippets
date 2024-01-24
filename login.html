@@ -16,17 +16,21 @@
         Login
       </h1>
       <div class="field">
-        <input type="email" id="email" name="email" placeholder=" ">
+        <input type="email" id="email" name="email" placeholder=" " autocomplete="off">
         <div class="label-holder">
           <label for="email">
             <span class="material-symbols-outlined">mail</span>
             Email
           </label>
+          <span class="material-symbols-outlined help-icon">help</span>
+          <span class="tooltip">
+            Your email will be used to login to your account and receive notifications.
+          </span>
         </div>
       </div>
       <div class="field">
         <div class="password-wrapper">
-          <input type="password" id="password" name="password" placeholder=" ">
+          <input type="password" id="password" name="password" placeholder=" " autocomplete="off">
           <div class="visibility-button">
             <span class="material-symbols-outlined">visibility</span>
           </div>
@@ -36,6 +40,10 @@
             <span class="material-symbols-outlined">lock</span>
             Password
           </label>
+          <span class="material-symbols-outlined help-icon">help</span>
+          <span class="tooltip">
+            Your password is needed to login and secure your account.
+          </span>
         </div>
       </div>
       <div class="controls">

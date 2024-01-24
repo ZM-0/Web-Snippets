@@ -17,7 +17,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5em;
     color: #456990;
-    background: linear-gradient(#FFF, #BFD7EA);
+    background: linear-gradient(#FFF, #BFD7EA) no-repeat;
 }
 
 /* Form */
@@ -38,7 +38,7 @@ h1 {
 .field {
     display: block flex;
     flex-direction: column-reverse;
-    margin: 0.5em 0;
+    margin: 1em 0;
 }
 
 /* Input Fields */
@@ -88,13 +88,19 @@ input:not([type="password"]):focus {
 
 /* Labels */
 
+.label-holder {
+    display: block flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 label {
     display: inline flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 70%;
     transform-origin: left top;
-    transform: translate(0.13em, 1.85em) scale(1.43);
+    transform: translate(0.09em, 1.6em) scale(1.43);
     transition: transform 0.3s;
 }
 
@@ -116,6 +122,38 @@ input:not(:placeholder-shown) + .label-holder label,
 .password-wrapper:has(input:focus) + .label-holder label,
 .password-wrapper:has(input:not(:placeholder-shown)) + .label-holder label {
     transform: translate(0, 0) scale(1);
+}
+
+/* Tooltips */
+
+.label-holder {
+    position: relative;
+}
+
+.help-icon {
+    font-size: 80% !important;
+    color: #D3D3D3;
+}
+
+.help-icon:hover {
+    cursor: default;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    padding: 0.5em;
+    bottom: 1.5em;
+    right: 0;
+    font-size: 60% !important;
+    border: solid 1px #D3D3D3;
+    border-radius: 0.5em;
+    color: #456990;
+    background-color: #FFF;
+}
+
+.help-icon:hover + .tooltip {
+    display: inline;
 }
 
 /* Control Buttons */
