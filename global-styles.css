@@ -1,0 +1,87 @@
+/* Global Styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Main Layout */
+
+body {
+    display: block flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body * {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+/* Main Navigation */
+
+header {
+    width: 100%;
+}
+
+header nav ul {
+    display: block flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0.5em 0;
+    list-style: none;
+    border-bottom: solid 2px #26408B;
+    background-color: #F5F5F5;
+    font-weight: bold;
+}
+
+header nav ul li {
+    display: inline flex;
+    align-items: center;
+}
+
+header nav ul li:not(:last-child)::after {
+    content: "\e5cc";
+    font-family: "Material Symbols Outlined";
+    color: #26408B;
+}
+
+header nav ul li a {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #26408B;
+}
+
+header nav ul li a::after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background-color: #26408B;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+header nav ul li a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Main Content */
+
+main {
+    display: block flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
