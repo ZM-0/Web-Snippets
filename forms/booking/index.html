@@ -12,26 +12,18 @@
       <article>
         <h1>Book your flight today</h1>
         <p>
-          Our travel service is the best. Book your holidays with us. Don't miss out. Book now!
+          Go anywhere in the world. Use our amazing booking system. Doesn't that water look so nice? You just want to drink it. Maybe I am just thirsty. More words. Even more words.
         </p>
       </article>
       <form action="#">
         <fieldset>
-          <div class="radio-item">
-            <input type="radio" name="tripType" id="round-trip" value="round-trip" checked>
-            <span></span>
-            <label for="round-trip">Round-trip</label>
-          </div>
-          <div class="radio-item">
-            <input type="radio" name="tripType" id="one-way" value="one-way">
-            <span></span>
-            <label for="one-way">One-way</label>
-          </div>
-          <div class="radio-item">
-            <input type="radio" name="tripType" id="multi-city" value="multi-city">
-            <span></span>
-            <label for="multi-city">Multi-city</label>
-          </div>
+          <legend>Trip type</legend>
+          <input type="radio" name="tripType" id="round-trip" value="roundTrip">
+          <label for="round-trip">Round-trip</label>
+          <input type="radio" name="tripType" id="one-way" value="oneWay">
+          <label for="one-way">One-way</label>
+          <input type="radio" name="tripType" id="multi-city" value="multiCity">
+          <label for="multi-city">Multi-city</label>
         </fieldset>
         <div class="locations">
           <div class="field">
@@ -43,50 +35,34 @@
             <input type="text" name="to" id="to" placeholder="City or airport">
           </div>
         </div>
-        <div class="dates">
-          <div class="field">
-            <label for="departing-date">Departing date</label>
-            <input type="date" name="departingDate" id="departing-date">
-          </div>
-          <div class="field">
-            <label for="returning-date">Returning date</label>
-            <input type="date" name="returningDate" id="returning-date">
-          </div>
-        </div>
-        <div class="details">
-          <div class="field">
-            <label for="adult-count">Adults (18+)</label>
-            <select name="adultCount" id="adult-count">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="child-count">Children (0-17)</label>
-            <select name="childCount" id="child-count">
-              <option>0</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="travel-class">Travel class</label>
-            <select name="travelClass" id="travel-class">
-              <option value="economy">Economy class</option>
-              <option value="business">Business class</option>
-              <option value="first">First class</option>
-            </select>
-          </div>
-        </div>
-        <div class="controls">
-          <button type="submit">Show flights</button>
-        </div>
+        <label for="departing-date">Departing date</label>
+        <input type="date" name="departingDate" id="departing-date">
+        <label for="arriving-date">Arriving date</label>
+        <input type="date" name="arrivingDate" id="arriving-date">
+        <label for="adult-count">Adults (18+)</label>
+        <select name="adults" id="adult-count">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        <label for="child-count">Children (0-17)</label>
+        <select name="children" id="child-count">
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+        <label for="travel-class">Travel class</label>
+        <select name="travelClass" id="travel-class">
+          <option value="economy">Economy class</option>
+          <option value="business">Business class</option>
+          <option value="first">First class</option>
+        </select>
+        <button type="submit">Show flights</button>
       </form>
     </main>
   </body>

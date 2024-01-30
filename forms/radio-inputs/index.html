@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/css-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-    <link rel="stylesheet" href="/global-styles.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Radio Inputs</title>
+    <title>Custom Radio Inputs</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/forms">Forms</a></li>
-          <li><a href="/forms/radio-inputs">Radio Inputs</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
+    <form action="#">
+      <fieldset>
+        <legend>Select an option</legend>
+        <label>
+          <input type="radio" name="choice" value="option1" checked>
+          <span></span>
+          Option 1
+        </label>
+        <label>
+          <input type="radio" name="choice" value="option2">
+          <span></span>
+          Option 2
+        </label>
+        <label>
+          <input type="radio" name="choice" value="option3">
+          <span></span>
+          Option 3
+        </label>
+        <label>
+          <input type="radio" name="choice" value="option4">
+          <span></span>
+          Option 4
+        </label>
+      </fieldset>
+    </form>
   </body>
 </html>

@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: block flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+    padding: 2em;
+    border: solid 2px #2F97C1;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    margin-bottom: 1em;
+    padding: 0;
+    font-weight: bold;
+    color: #2F97C1;
+}
+
+label {
+    display: block flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input {
+    position: absolute;
+    visibility: hidden;
+}
+
+span {
+    display: block flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+    border: solid 0.1em #2F97C1;
+    border-radius: 50%;
+}
+
+span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 50%;
+    background-color: #2F97C1;
+    transform: scale(0);
+    transition: transform 0.4s;
+}
+
+input:checked + span::after {
+    transform: scale(1);
+}
