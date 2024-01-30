@@ -54,8 +54,8 @@ span {
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 1em;
-    width: 1em;
+    height: 16px;
+    width: 16px;
     margin-right: 0.5em;
     border: solid 0.1em #2F97C1;
     border-radius: 50%;
@@ -65,8 +65,8 @@ span::after {
     content: "";
     display: block;
     position: absolute;
-    height: 0.6em;
-    width: 0.6em;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: #2F97C1;
     transform: scale(0);
