@@ -13,11 +13,12 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 150%;
 }
 
 form {
     padding: 2em;
-    border: solid 2px #2F97C1;
+    border: solid 4px #2F97C1;
 }
 
 fieldset {
@@ -54,10 +55,10 @@ span {
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 16px;
-    width: 16px;
+    height: 24px;
+    width: 24px;
     margin-right: 0.5em;
-    border: solid 0.1em #2F97C1;
+    border: solid 2px #2F97C1;
     border-radius: 50%;
 }
 
@@ -65,8 +66,8 @@ span::after {
     content: "";
     display: block;
     position: absolute;
-    height: 10px;
-    width: 10px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
     background-color: #2F97C1;
     transform: scale(0);
