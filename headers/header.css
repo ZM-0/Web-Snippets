@@ -60,6 +60,7 @@ a span::after {
     height: 2px;
     width: 100%;
     bottom: 0;
+    border-radius: 1px;
     background-color: #ADB5BD;
     transform: scaleX(0);
 }
@@ -74,6 +75,7 @@ span#line {
     height: 2px;
     left: 1em;
     bottom: 1em;
+    border-radius: 1px;
     background-color: #FFF;
-    transition: all 0.5s;
+    transition: all 0.8s;
 }
